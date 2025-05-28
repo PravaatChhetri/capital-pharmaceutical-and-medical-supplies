@@ -70,10 +70,10 @@ export function Navigation() {
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Pill className="h-6 w-6 text-white" />
               </div>
-              <span className="text-sm font-bold text-gray-900 hidden sm:block w-[50px]">
+              <span className="text-xl font-bold text-gray-900 hidden sm:block">
                 CAPITAL PHARMACEUTICAL & MEDICAL SUPPLIES
               </span>
-              <span className="text-sm w-[200px] font-bold text-gray-900 sm:hidden">CAPITAL PHARMACEUTICAL & MEDICAL SUPPLIES</span>
+              <span className="text-lg font-bold text-gray-900 sm:hidden">CAPITAL PHARMA</span>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
@@ -109,10 +109,10 @@ export function Navigation() {
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
               <Pill className="h-6 w-6 text-white" />
             </div>
-            <span className="text-sm w-[200px] font-bold text-gray-900 hidden sm:block">
+            <span className="text-xl font-bold text-gray-900 hidden sm:block">
               CAPITAL PHARMACEUTICAL & MEDICAL SUPPLIES
             </span>
-            <span className="text-xs w-[200] font-bold text-gray-900 sm:hidden">CAPITAL PHARMACEUTICAL & MEDICAL SUPPLIES</span>
+            <span className="text-lg font-bold text-gray-900 sm:hidden">CAPITAL PHARMA</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -156,7 +156,7 @@ export function Navigation() {
                         <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                           <Pill className="h-5 w-5 text-white" />
                         </div>
-                        <SheetTitle className="text-xs font-bold text-gray-900">CAPITAL PHARMACEUTICAL & MEDICAL SUPPLIES</SheetTitle>
+                        <SheetTitle className="text-lg font-bold text-gray-900">CAPITAL PHARMA</SheetTitle>
                       </Link>
                   
                     </div>
