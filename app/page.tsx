@@ -1,36 +1,44 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Shield, Users, Award, ArrowRight, Phone, Mail } from "lucide-react"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Users, Award, ArrowRight, Phone, Mail } from "lucide-react";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 -top-20 py-20 lg:py-24 h-screen">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge variant="secondary" className="bg-blue-100 text-blue-800">
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-100 text-blue-800"
+                >
                   Trusted Healthcare Partner
                 </Badge>
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   Quality Medical Supplies for Better Healthcare
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Providing pharmaceutical excellence and medical supplies to healthcare professionals worldwide. Your
-                  trusted partner in advancing patient care.
+                  Providing pharmaceutical excellence and medical supplies to
+                  healthcare professionals worldwide. Your trusted partner in
+                  advancing patient care.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700"
+                >
                   <Link href="/products">
                     Explore Our Products <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -42,10 +50,11 @@ export default function HomePage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/hero-medical-supplies.jpg"
+                height={100}
+                width={100}
+                src="/images/surgical-supplies.jpg"
                 alt="Medical supplies and pharmaceuticals"
-              
-                className="rounded-lg shadow-2xl object-cover w-[90%] h-[50%] lg:w-[50%] lg:h-auto"
+                className="rounded-lg shadow-2xl object-cover w-[100%] h-[30%] lg:w-[80%] lg:h-auto filter brightness-25 grayscale"
                 priority
               />
             </div>
@@ -57,9 +66,12 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Foundation</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Foundation
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built on principles of excellence, integrity, and innovation in healthcare
+              Built on principles of excellence, integrity, and innovation in
+              healthcare
             </p>
           </div>
 
@@ -69,12 +81,15 @@ export default function HomePage() {
                 <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   <Shield className="h-8 w-8 text-blue-600" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900">Mission</CardTitle>
+                <CardTitle className="text-2xl text-gray-900">
+                  Mission
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 leading-relaxed">
-                  To provide high-quality pharmaceutical products and medical supplies that enhance patient care and
-                  support healthcare professionals in their mission to heal.
+                  To provide high-quality pharmaceutical products and medical
+                  supplies that enhance patient care and support healthcare
+                  professionals in their mission to heal.
                 </p>
               </CardContent>
             </Card>
@@ -88,8 +103,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 leading-relaxed">
-                  To be the leading global provider of innovative medical solutions, improving healthcare outcomes and
-                  accessibility worldwide.
+                  To be the leading global provider of innovative medical
+                  solutions, improving healthcare outcomes and accessibility
+                  worldwide.
                 </p>
               </CardContent>
             </Card>
@@ -103,8 +119,9 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 leading-relaxed">
-                  Integrity, Excellence, Innovation, and Compassion guide everything we do. We are committed to the
-                  highest standards of quality and safety.
+                  Integrity, Excellence, Innovation, and Compassion guide
+                  everything we do. We are committed to the highest standards of
+                  quality and safety.
                 </p>
               </CardContent>
             </Card>
@@ -116,7 +133,9 @@ export default function HomePage() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Product Categories</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Product Categories
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive range of pharmaceutical and medical supplies
             </p>
@@ -129,11 +148,26 @@ export default function HomePage() {
                 count: "500+ Products",
                 image: "/images/prescription-medications.jpg",
               },
-              { name: "Medical Devices", count: "200+ Products", image: "/images/medical-devices.jpg" },
-              { name: "Surgical Supplies", count: "300+ Products", image: "/images/surgical-supplies.jpg" },
-              { name: "Laboratory Equipment", count: "150+ Products", image: "/images/laboratory-equipment.jpg" },
+              {
+                name: "Medical Devices",
+                count: "200+ Products",
+                image: "/images/medical-devices.jpg",
+              },
+              {
+                name: "Surgical Supplies",
+                count: "300+ Products",
+                image: "/images/surgical-supplies.jpg",
+              },
+              {
+                name: "Laboratory Equipment",
+                count: "150+ Products",
+                image: "/images/laboratory-equipment.jpg",
+              },
             ].map((category, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-shadow cursor-pointer">
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-shadow cursor-pointer"
+              >
                 <CardContent className="p-0">
                   <Image
                     src={category.image || "/placeholder.svg"}
@@ -143,8 +177,12 @@ export default function HomePage() {
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.name}</h3>
-                    <p className="text-blue-600 font-medium">{category.count}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {category.name}
+                    </h3>
+                    <p className="text-blue-600 font-medium">
+                      {category.count}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -165,14 +203,22 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Trusted & Certified</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Trusted & Certified
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our commitment to quality is recognized by leading healthcare organizations
+              Our commitment to quality is recognized by leading healthcare
+              organizations
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            {["FDA Approved", "ISO 9001:2015", "GMP Certified", "WHO Prequalified"].map((cert, index) => (
+            {[
+              "FDA Approved",
+              "ISO 9001:2015",
+              "GMP Certified",
+              "WHO Prequalified",
+            ].map((cert, index) => (
               <div key={index} className="text-center">
                 <div className="w-24 h-24 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Award className="h-12 w-12 text-gray-400" />
@@ -188,7 +234,9 @@ export default function HomePage() {
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What Our Partners Say</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              What Our Partners Say
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -206,16 +254,21 @@ export default function HomePage() {
                 title: "Procurement Manager, Regional Health Network",
               },
               {
-                quote: "Their commitment to quality and compliance gives us confidence in every order we place.",
+                quote:
+                  "Their commitment to quality and compliance gives us confidence in every order we place.",
                 author: "Dr. Emily Rodriguez",
                 title: "Pharmacy Director, Metro Medical Center",
               },
             ].map((testimonial, index) => (
               <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-8">
-                  <p className="text-gray-600 mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 mb-6 italic leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
                   <div>
-                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                    <p className="font-semibold text-gray-900">
+                      {testimonial.author}
+                    </p>
                     <p className="text-sm text-gray-500">{testimonial.title}</p>
                   </div>
                 </CardContent>
@@ -228,9 +281,12 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Partner with Us?</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Partner with Us?
+          </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of healthcare professionals who trust us for their medical supply needs.
+            Join thousands of healthcare professionals who trust us for their
+            medical supply needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary">
@@ -256,5 +312,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,16 +1,22 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,13 +26,13 @@ export default function ContactPage() {
     phone: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! We'll get back to you soon.")
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We'll get back to you soon.");
     setFormData({
       name: "",
       email: "",
@@ -34,15 +40,17 @@ export default function ContactPage() {
       phone: "",
       subject: "",
       message: "",
-    })
-  }
+    });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -51,10 +59,12 @@ export default function ContactPage() {
       {/* Header */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Contact Us</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Contact Us
+          </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with our team for inquiries, orders, or support. We're here to help you with all your medical
-            supply needs.
+            Get in touch with our team for inquiries, orders, or support. We're
+            here to help you with all your medical supply needs.
           </p>
         </div>
       </section>
@@ -62,12 +72,17 @@ export default function ContactPage() {
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 relative">
             {/* Contact Form */}
-            <Card className="shadow-lg">
+            <Card className="shadow-lg lg:sticky lg:top-20 h-fit">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Send us a Message</CardTitle>
-                <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
+                <CardTitle className="text-2xl text-gray-900">
+                  Send us a Message
+                </CardTitle>
+                <CardDescription>
+                  Fill out the form below and we'll get back to you within 24
+                  hours.
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -146,7 +161,10 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700"
+                  >
                     <Send className="mr-2 h-4 w-4" />
                     Send Message
                   </Button>
@@ -158,8 +176,12 @@ export default function ContactPage() {
             <div className="space-y-8">
               <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-gray-900">Contact Information</CardTitle>
-                  <CardDescription>Reach out to us through any of these channels</CardDescription>
+                  <CardTitle className="text-2xl text-gray-900">
+                    Contact Information
+                  </CardTitle>
+                  <CardDescription>
+                    Reach out to us through any of these channels
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -180,7 +202,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
                       <p className="text-gray-600">info@newmedsolutions.com</p>
-                      <p className="text-gray-600">orders@newmedsolutions.com</p>
+                      <p className="text-gray-600">
+                        orders@newmedsolutions.com
+                      </p>
                     </div>
                   </div>
 
@@ -205,7 +229,9 @@ export default function ContactPage() {
                       <Clock className="h-6 w-6 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">Business Hours</h3>
+                      <h3 className="font-semibold text-gray-900">
+                        Business Hours
+                      </h3>
                       <p className="text-gray-600">
                         Monday - Friday: 8:00 AM - 6:00 PM
                         <br />
@@ -217,8 +243,13 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-gray-900">License Information</h3>
-                    <p className="text-gray-600">Licensed by the California State Board of Pharmacy, License #12345</p>
+                    <h3 className="font-semibold text-gray-900">
+                      License Information
+                    </h3>
+                    <p className="text-gray-600">
+                      Licensed by the California State Board of Pharmacy,
+                      License #12345
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -226,7 +257,9 @@ export default function ContactPage() {
               {/* Map */}
               <Card className="shadow-lg">
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-900">Our Location</CardTitle>
+                  <CardTitle className="text-xl text-gray-900">
+                    Our Location
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                   <div className="w-full h-64 bg-gray-200 rounded-b-lg flex items-center justify-center">
@@ -250,5 +283,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
